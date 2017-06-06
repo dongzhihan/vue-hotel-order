@@ -4,7 +4,7 @@
       <swiper-item class="swiper-demo-img" v-for="(item, index) in imgList" :key="index"><img style="height:100%;width:100%" :src="item"></swiper-item>
     </swiper>
     <div class="flexCenter" style="display:flex; flex-wrap: wrap">
-      <div style="width:50%" v-for="(item,index) in bedTypes">
+      <div @click="goTo(item.id)" style="margin-top:0.3rem;width:50%" v-for="(item,index) in bedTypes">
         <div class="center"><img style="width:80%;height:80%" :src="item.src" alt="">
         </div>
         <div class="center fontName"><span>{{item.name}}</span></div>
@@ -44,6 +44,7 @@
           'http://placeholder.qiniudn.com/800x300/8AEEB1/ffffff'
         ],
         bedTypes: [
+
           {
             src: 'https://oixyh3u6e.qnssl.com/livingearth/livingearth.png',
             id: 5,
@@ -80,13 +81,13 @@
       SwiperItem
     },
     methods: {
-      goTo(carId) {
+      goTo(bedId) {
         //  this.$http.post(api.xxx, data, api.config).then((data) => {
         // if (data.data.Errcode === 0) {
         this.$router.push({
-          name: 'carCtl',
+          name: 'bedDetail',
           params: {
-            id: carId
+            id: bedId
           }
         });
         // }
@@ -97,15 +98,12 @@
 
 </script>
 <style scoped>
-   .center
-   {
-     text-align: center;
-   }
-   .fontName
-   {
-     font-size: 0.5rem;
-     font-weight: bold;
-     font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
-   }
- 
+
+
+  .fontName {
+    font-size: 0.5rem;
+    font-weight: bold;
+    font-family: STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑";
+  }
+
 </style>
