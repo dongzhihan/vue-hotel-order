@@ -19,9 +19,9 @@ Vue.use(VueRouter);
 Vue.prototype.$http = axios;
 FastClick.attach(document.body);
 // ///注册
-//Vue.component(Field.name, Field);
+// Vue.component(Field.name, Field);
 // ////////////////////jquery 引入
-//Vue.prototype.$jquery = $;
+// Vue.prototype.$jquery = $;
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
 new Vue({

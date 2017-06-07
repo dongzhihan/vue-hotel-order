@@ -2,8 +2,12 @@
   <div style="">
     <x-header>{{$route.name}}</x-header>
     <!--首图-->
-
     <div class="center"><img :src="hotel.img" alt=""></div>
+    <tab :line-width="1" custom-bar-width="60px">
+      <tab-item selected>1</tab-item>
+      <tab-item>2</tab-item>
+      <tab-item>3</tab-item>
+    </tab>
   </div>
 </template>
 <style>
@@ -16,7 +20,9 @@
   import {
     XHeader,
     Cell,
-    Group
+    Group,
+    Tab,
+    TabItem
   } from 'vux';
 
   export default {
@@ -40,7 +46,9 @@
     components: {
       XHeader,
       Cell,
-      Group
+      Group,
+      Tab,
+      TabItem
     }
 
   };
